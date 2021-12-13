@@ -29,21 +29,12 @@ echo "STARTING ARCHI"
     -consoleLog -nosplash --abortOnException \
     --modelrepository.loadModel "/tmp/model" \
     --html.createReport "/tmp/html" \
-    --jasper.format "pdf" \
+    --jasper.format "pdf,html,rtf,ppt,odt,docx" \
     --jasper.filename "model-report" \
     --jasper.title "Model Report" \
     --jasper.createReport "/tmp/html"
 
-echo "HTML DONE"
+echo EXPORT DONE"
 
-#/usr/bin/xvfb-run --server-num 1 \
-#  /opt/Archi/Archi \
-#    -application com.archimatetool.commandline.app \
-#    -consoleLog -nosplash --abortOnException \
-#    --modelrepository.loadModel "/tmp/model" \
-#    --jasper.format "pdf" \
-#    --jasper.filename "model-report" \
-#    --jasper.title "Model Report" \
-#    --jasper.createReport "/tmp/html"
-
-# echo "PDF DONE"
+#Tim Notes
+# Archi CLI reference - https://github.com/archimatetool/archi/wiki/Archi-Command-Line-Interface
