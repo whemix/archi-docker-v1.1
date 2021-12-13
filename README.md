@@ -9,7 +9,7 @@ This Docker image provides a mechanism to generate HTML reports from an Archi mo
 v1.1
 - Forked from [archi-docker](https://github.com/users/dsample/packages/container/package/archi-docker)
 - modified build-report.sh to output all possible report types
-- modified to use latest Archi and Co-Archi version
+- modified to use Archi v4.9.1 and Co-Archi v0.8.1.202112061132
 
 
 ## Insallation
