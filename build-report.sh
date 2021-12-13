@@ -28,18 +28,22 @@ echo "STARTING ARCHI"
     -application com.archimatetool.commandline.app \
     -consoleLog -nosplash --abortOnException \
     --modelrepository.loadModel "/tmp/model" \
-    --html.createReport "/tmp/html"
-
-echo "HTML DONE"
-
-/usr/bin/xvfb-run --server-num 1 \
-  /opt/Archi/Archi \
-    -application com.archimatetool.commandline.app \
-    -consoleLog -nosplash --abortOnException \
-    --modelrepository.loadModel "/tmp/model" \
+    --html.createReport "/tmp/html" \
     --jasper.format "pdf" \
     --jasper.filename "model-report" \
     --jasper.title "Model Report" \
     --jasper.createReport "/tmp/html"
 
-echo "PDF DONE"
+echo "HTML DONE"
+
+#/usr/bin/xvfb-run --server-num 1 \
+#  /opt/Archi/Archi \
+#    -application com.archimatetool.commandline.app \
+#    -consoleLog -nosplash --abortOnException \
+#    --modelrepository.loadModel "/tmp/model" \
+#    --jasper.format "pdf" \
+#    --jasper.filename "model-report" \
+#    --jasper.title "Model Report" \
+#    --jasper.createReport "/tmp/html"
+
+# echo "PDF DONE"
