@@ -34,7 +34,7 @@ echo "STARTING ARCHI"
     --jasper.title "Model Report" \
     --jasper.createReport "/tmp/html"
 
-echo EXPORT DONE"
+echo "EXPORT DONE"
 
 #Tim Notes
 # Archi CLI reference - https://github.com/archimatetool/archi/wiki/Archi-Command-Line-Interface
