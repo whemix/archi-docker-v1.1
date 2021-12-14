@@ -45,7 +45,7 @@ Explanation of the command line arguments above:
 * `-v "$(pwd)":/tmp/model`: Mounts the current working directory (where the coArchi model is located) within the container
 * `-v "$(pwd)/html":/tmp/html`: Mounts the `html` directory within the current working directory into the container for the output to be saved in
 
-### GitHub Actions
+### GitHub Actions Example
 
 Using GitHub Actions an HTML report can be generated for the model upon each commit. Placing the resulting report into the `docs` directory also enables the use of GitHub Pages (which is available for private repositories).
 
@@ -72,13 +72,41 @@ jobs:
         docker run --rm -i
         -v "$(pwd)":/tmp/model
         -v "$(pwd)/docs":/tmp/html
-        ghcr.io/dsample/archi-docker:main
+        ghcr.io/whemix/archi-docker-v1.1:main
     - name: Commit the report
       run: |
         git config --global user.name "Archi"
         git add docs
         git diff-index --quiet HEAD || git commit -m 'Update report'
         git push
+```
+
+### Azure Pipeline Example
+
+Using Azure Pipeline, generate interactive HTML and static reports in PDF, HTML, RTF, PPT, ODT, DOCX format for the model upon each commit. Resulting reports are placed into the `docs` directory of the model repository (in Azure Repos)
+
+```yaml
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+  persistCredentials: true
+- script: docker run --rm -i
+        -v "$(pwd)":/tmp/model
+        -v "$(pwd)/docs":/tmp/html
+        ghcr.io/whemix/archi-docker-v1.1:main
+  displayName: 'Build the report'
+
+- script: |
+        git config --global user.name "Archi"
+        git add docs
+        git diff-index --quiet HEAD || git commit -m '[skip ci] Update report'
+        git push origin HEAD:master --force
+  displayName: 'Commit the report'
 ```
 
 [archi]: https://www.archimatetool.com/download/
