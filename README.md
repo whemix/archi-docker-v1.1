@@ -1,10 +1,11 @@
 # Archi Report Builder v1.1 (Docker image)
 
-This Docker image provides a mechanism to generate HTML reports from an Archi model (using coArchi).
+This Docker image provides a mechanism to generate reports from an Archi model (using coArchi).
 
 [Archi](https://www.archimatetool.com) is a visual modelling tool for enterprise architecture, using ArchiMate notation.
 
 Credit to [archi-docker](https://github.com/users/dsample/packages/container/package/archi-docker) which this fork is based on.
+
 
 ## Change Log
 
