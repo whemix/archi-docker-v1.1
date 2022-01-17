@@ -9,7 +9,10 @@ Credit to [archi-docker](https://github.com/users/dsample/packages/container/pac
 
 ## Change Log
 
-v1.1
+2022-01-17
+- - modified to use Archi v4.9.2 and Co-Archi v0.8.1.202112061132
+
+2021-12-13
 - Forked from [archi-docker](https://github.com/users/dsample/packages/container/package/archi-docker)
 - modified build-report.sh to output all possible report types
 - modified to use Archi v4.9.1 and Co-Archi v0.8.1.202112061132
