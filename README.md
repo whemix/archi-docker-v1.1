@@ -38,7 +38,7 @@ In order to build an HTML report, first you need to set up a repository with a c
 ### Command line
 
 ```shell
-docker run --rm -i -v "$(pwd)":/tmp/model -v "$(pwd)/html":/tmp/html ghcr.io/dsample/archi-docker:main
+docker run --rm -i -v "$(pwd)":/tmp/model -v "$(pwd)/html":/tmp/html ghcr.io/whemix/archi-docker-v1.1:main
 ```
 
 Explanation of the command line arguments above:
