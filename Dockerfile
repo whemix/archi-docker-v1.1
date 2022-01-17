@@ -1,6 +1,6 @@
 FROM debian:stable-slim
 
-ARG ARCHI_VER=4.9.1
+ARG ARCHI_VER=4.9.2
 ARG COARCHI_VER=0.8.1.202112061132
 
 RUN apt update && \
