@@ -9,6 +9,9 @@ Credit to [archi-docker](https://github.com/users/dsample/packages/container/pac
 
 ## Change Log
 
+2025-08-16
+- updated to use Archi v5.5.0 and Co-Archi v0.9.4
+
 2022-01-17
 - updated to use Archi v4.9.2 and Co-Archi v0.8.1.202112061132
 
